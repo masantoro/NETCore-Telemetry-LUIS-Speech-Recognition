@@ -1,2 +1,5 @@
-# NETCore-Telemetry-LUIS-Speech-Recognition
-.NET Core - Telemetry - LUIS + Speech Recognition
+# Telemetry, IA and Speech Recognition
+- .NET Core
+- LUIS Microsoft
+- Microsoft Speech Recognition SDK
+- Virtual Audio Cable
