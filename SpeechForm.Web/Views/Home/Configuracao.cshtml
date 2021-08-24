@@ -1,0 +1,171 @@
+﻿@using SpeechForm.Web.Models.Enum
+@model IEnumerable<SpeechForm.Repository.Entity.Table.SettingsEntity>
+@{
+    ViewData["Title"] = "Configurações";
+}
+<h1>@ViewData["Title"]</h1>
+
+@{ if (Model.Count() == 2)
+    {
+        var _supervisor = Model.Where(x => x.PartitionKey == NotificationEnum.To.Supervisor.ToString()).FirstOrDefault();
+        var _atendente = Model.Where(x => x.PartitionKey == NotificationEnum.To.Atendente.ToString()).FirstOrDefault();
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12" style="min-height:200px;">
+                <nav>
+                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                        <a class="nav-item nav-link active" id="nav-supervisor-tab" data-toggle="tab" href="#nav-supervisor" role="tab" aria-controls="nav-supervisor" aria-selected="true">Supervisor</a>
+                        <a class="nav-item nav-link" id="nav-atendente-tab" data-toggle="tab" href="#nav-atendente" role="tab" aria-controls="nav-atendente" aria-selected="false">Atendente</a>
+                    </div>
+                </nav>
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active form-group" id="nav-supervisor" role="tabpanel" aria-labelledby="nav-supervisor-tab">
+                        <div class="row mt-4">
+                            <div class="col-sm-12">
+                                <label for="super-tempo-silencio" class="col-form-label">Alertar tempo de silêncio (segundos)</label>
+                                <input class="col-sm-2 form-control" type="number" value="@(_supervisor != null && _supervisor.TempoSilencio != null && _supervisor.TempoSilencio > 0 ? _supervisor.TempoSilencio : 0)" id="super-tempo-silencio">
+                            </div>
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col-sm-12">
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" type="checkbox" id="super-sobreposicao" checked="@(_supervisor != null && _supervisor.SobreposicaoVoz != null ? _supervisor.SobreposicaoVoz : false)"> Alertar sobreposição de voz ?
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col-sm-12">
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" type="checkbox" id="super-sentimento-negativo-cliente" checked="@(_supervisor != null && _supervisor.SentimentoNegativoCliente != null ? _supervisor.SentimentoNegativoCliente : false)"> Alertar sentimento negavito do cliente ?
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col-sm-12">
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" type="checkbox" id="super-sentimento-negativo-atendente" checked="@(_supervisor != null && _supervisor.SentimentoNegativoAtendente != null ? _supervisor.SentimentoNegativoAtendente : false)"> Alertar sentimento negavito do atendente ?
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="nav-atendente" role="tabpanel" aria-labelledby="nav-atendente-tab">
+                        <div class="row mt-4">
+                            <div class="col-sm-12">
+                                <label for="atendente-tempo-silencio" class="col-form-label">Alertar tempo de silêncio (segundos)</label>
+                                <input class="col-sm-2 form-control" type="number" value="@(_atendente != null && _atendente.TempoSilencio != null && _atendente.TempoSilencio > 0 ? _atendente.TempoSilencio : 0)" id="atendente-tempo-silencio">
+                            </div>
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col-sm-12">
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" type="checkbox" id="atendente-sobreposicao" checked="@(_atendente != null && _atendente.SobreposicaoVoz != null ? _atendente.SobreposicaoVoz : false)"> Alertar sobreposição de voz ?
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col-sm-12">
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" type="checkbox" id="atendente-sentimento-negativo-cliente" checked="@(_atendente != null && _atendente.SentimentoNegativoCliente != null ? _atendente.SentimentoNegativoCliente : false)"> Alertar sentimento negavito do cliente ?
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            
+            <div class="col-sm-12 pt-5">
+                <div class="alert alert-success" style="display:none" id="success-alert">
+                    <button type="button" class="close" data-dismiss="alert">x</button>
+                    <strong>Successo! </strong> As configurações foram salvas!
+                </div>
+
+                <div class="alert alert-danger" style="display:none" id="danger-alert">
+                    <button type="button" class="close" data-dismiss="alert">x</button>
+                    <strong>Erro! </strong> Não foi possível salvar as configurações!
+                </div>
+
+                <button type="button" class="btn btn-primary btn-salvar">Salvar</button>
+                <button type="button" class="btn btn-primary btn-salvando" style="display:none" disabled>
+                    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                    Salvando...
+                </button>
+            </div>
+        </div>
+    </div>
+
+    }
+}
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        var supervisor = '@(NotificationEnum.To.Supervisor.ToString())';
+        var atendente = '@(NotificationEnum.To.Atendente.ToString())';
+
+        function Salvar(start) {
+            if (start) {
+                $('.btn-salvar').hide();
+                $('.btn-salvando').show();
+            } else {
+                $('.btn-salvar').show();
+                $('.btn-salvando').hide();
+            }
+        }
+
+
+        $('.btn-salvar').click(function (e) {
+            e.preventDefault();
+
+            var model = [];
+
+            var item = {
+                PartitionKey: supervisor,
+                RowKey: supervisor,
+                TempoSilencio: $('#super-tempo-silencio').val(),
+                SobreposicaoVoz: $('#super-sobreposicao').is(":checked"),
+                SentimentoNegativoCliente: $('#super-sentimento-negativo-cliente').is(":checked"),
+                SentimentoNegativoAtendente: $('#super-sentimento-negativo-atendente').is(":checked")
+            };
+            model.push(item);
+
+            var item = {
+                PartitionKey: atendente,
+                RowKey: atendente,
+                TempoSilencio: $('#atendente-tempo-silencio').val(),
+                SobreposicaoVoz: $('#atendente-sobreposicao').is(":checked"),
+                SentimentoNegativoCliente: $('#atendente-sentimento-negativo-cliente').is(":checked")
+            };
+            model.push(item);
+
+            Salvar(true);
+
+            $.post('/Home/SaveSettings', {model: model})
+                .done(function (r) {
+                    $("#success-alert").fadeTo(5000, 500).slideUp(500, function () {
+                        $("#success-alert").slideUp(500);
+                    });
+                    Salvar(false);
+                })
+                .fail(function (e) {
+                    $("#danger-alert").fadeTo(5000, 500).slideUp(500, function () {
+                        $("#danger-alert").slideUp(500);
+                    });
+                    Salvar(false);
+                });
+        });
+    });
+</script>
+
+

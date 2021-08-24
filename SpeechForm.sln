@@ -1,0 +1,162 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SpeechForm", "SpeechForm\SpeechForm.csproj", "{6BE4A604-FAE8-4341-995E-353618352E4A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SpeechForm.Web", "SpeechForm.Web\SpeechForm.Web.csproj", "{D8E5E40A-DAA8-4367-AF37-EBCF990104D1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SpeechForm.Repository", "SpeechForm.Repository\SpeechForm.Repository.csproj", "{A3CB8680-F871-405C-9047-A695E46C2013}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ApplicationLayer", "ApplicationLayer", "{7A0CD049-C5BB-4192-951F-AEC3A76DECFD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataLayer", "DataLayer", "{A1CF0E69-DBEF-4BB3-877C-48DD7A8DEBB3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ServiceLayer", "ServiceLayer", "{A02F1FC7-E7B5-4A61-B368-25EF1589D149}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SpeechForm.AzureFunction", "SpeechForm.AzureFunction\SpeechForm.AzureFunction.csproj", "{26B97D71-F840-4B2E-95DD-E172B3596400}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Setup", "Setup", "{F28D8C27-BA0B-44AC-8DDB-64B10062D1C7}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SpeechForm.Setup", "SpeechForm.Setup\SpeechForm.Setup.vdproj", "{2991521E-8E24-4E04-ABDB-BACFEE42D680}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SpeechForm.Business", "SpeechForm.Business\SpeechForm.Business.csproj", "{0CDAB116-CB84-4C56-9350-00F22A26793D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpeechForm.Models", "SpeechForm.Models\SpeechForm.Models.csproj", "{E296A307-FA0A-4E40-BECA-493639B3DC5D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6BE4A604-FAE8-4341-995E-353618352E4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BE4A604-FAE8-4341-995E-353618352E4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BE4A604-FAE8-4341-995E-353618352E4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BE4A604-FAE8-4341-995E-353618352E4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8E5E40A-DAA8-4367-AF37-EBCF990104D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8E5E40A-DAA8-4367-AF37-EBCF990104D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8E5E40A-DAA8-4367-AF37-EBCF990104D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8E5E40A-DAA8-4367-AF37-EBCF990104D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3CB8680-F871-405C-9047-A695E46C2013}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3CB8680-F871-405C-9047-A695E46C2013}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3CB8680-F871-405C-9047-A695E46C2013}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3CB8680-F871-405C-9047-A695E46C2013}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26B97D71-F840-4B2E-95DD-E172B3596400}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26B97D71-F840-4B2E-95DD-E172B3596400}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26B97D71-F840-4B2E-95DD-E172B3596400}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26B97D71-F840-4B2E-95DD-E172B3596400}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2991521E-8E24-4E04-ABDB-BACFEE42D680}.Debug|Any CPU.ActiveCfg = Debug
+		{2991521E-8E24-4E04-ABDB-BACFEE42D680}.Release|Any CPU.ActiveCfg = Release
+		{0CDAB116-CB84-4C56-9350-00F22A26793D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CDAB116-CB84-4C56-9350-00F22A26793D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CDAB116-CB84-4C56-9350-00F22A26793D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CDAB116-CB84-4C56-9350-00F22A26793D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E296A307-FA0A-4E40-BECA-493639B3DC5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E296A307-FA0A-4E40-BECA-493639B3DC5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E296A307-FA0A-4E40-BECA-493639B3DC5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E296A307-FA0A-4E40-BECA-493639B3DC5D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6BE4A604-FAE8-4341-995E-353618352E4A} = {7A0CD049-C5BB-4192-951F-AEC3A76DECFD}
+		{D8E5E40A-DAA8-4367-AF37-EBCF990104D1} = {7A0CD049-C5BB-4192-951F-AEC3A76DECFD}
+		{A3CB8680-F871-405C-9047-A695E46C2013} = {A1CF0E69-DBEF-4BB3-877C-48DD7A8DEBB3}
+		{26B97D71-F840-4B2E-95DD-E172B3596400} = {A02F1FC7-E7B5-4A61-B368-25EF1589D149}
+		{2991521E-8E24-4E04-ABDB-BACFEE42D680} = {F28D8C27-BA0B-44AC-8DDB-64B10062D1C7}
+		{0CDAB116-CB84-4C56-9350-00F22A26793D} = {A02F1FC7-E7B5-4A61-B368-25EF1589D149}
+		{E296A307-FA0A-4E40-BECA-493639B3DC5D} = {A02F1FC7-E7B5-4A61-B368-25EF1589D149}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F236041E-C38F-495B-B1D3-2EF2700057FD}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 6
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://dev.azure.com/marcosantorosoares
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = SpeechForm.Web\\SpeechForm.Web.csproj
+		SccProjectTopLevelParentUniqueName1 = SpeechForm.sln
+		SccProjectName1 = SpeechForm.Web
+		SccLocalPath1 = SpeechForm.Web
+		SccProjectUniqueName2 = SpeechForm\\SpeechForm.csproj
+		SccProjectTopLevelParentUniqueName2 = SpeechForm.sln
+		SccProjectName2 = SpeechForm
+		SccLocalPath2 = SpeechForm
+		SccProjectUniqueName3 = SpeechForm.Repository\\SpeechForm.Repository.csproj
+		SccProjectTopLevelParentUniqueName3 = SpeechForm.sln
+		SccProjectName3 = SpeechForm.Repository
+		SccLocalPath3 = SpeechForm.Repository
+		SccProjectUniqueName4 = SpeechForm.AzureFunction\\SpeechForm.AzureFunction.csproj
+		SccProjectTopLevelParentUniqueName4 = SpeechForm.sln
+		SccProjectName4 = SpeechForm.AzureFunction
+		SccLocalPath4 = SpeechForm.AzureFunction
+		SccProjectUniqueName5 = SpeechForm.Models\\SpeechForm.Models.csproj
+		SccProjectTopLevelParentUniqueName5 = SpeechForm.sln
+		SccProjectName5 = SpeechForm.Models
+		SccLocalPath5 = SpeechForm.Models
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 7
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://dev.azure.com/marcosantorosoares
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = SpeechForm.Web\\SpeechForm.Web.csproj
+		SccProjectTopLevelParentUniqueName1 = SpeechForm.sln
+		SccProjectName1 = SpeechForm.Web
+		SccLocalPath1 = SpeechForm.Web
+		SccProjectUniqueName2 = SpeechForm\\SpeechForm.csproj
+		SccProjectTopLevelParentUniqueName2 = SpeechForm.sln
+		SccProjectName2 = SpeechForm
+		SccLocalPath2 = SpeechForm
+		SccProjectUniqueName3 = SpeechForm.Repository\\SpeechForm.Repository.csproj
+		SccProjectTopLevelParentUniqueName3 = SpeechForm.sln
+		SccProjectName3 = SpeechForm.Repository
+		SccLocalPath3 = SpeechForm.Repository
+		SccProjectUniqueName4 = SpeechForm.AzureFunction\\SpeechForm.AzureFunction.csproj
+		SccProjectTopLevelParentUniqueName4 = SpeechForm.sln
+		SccProjectName4 = SpeechForm.AzureFunction
+		SccLocalPath4 = SpeechForm.AzureFunction
+		SccProjectUniqueName5 = SpeechForm.Models\\SpeechForm.Models.csproj
+		SccProjectTopLevelParentUniqueName5 = SpeechForm.sln
+		SccProjectName5 = SpeechForm.Models
+		SccLocalPath5 = SpeechForm.Models
+		SccProjectUniqueName6 = SpeechForm.Models\\SpeechForm.Models.csproj
+		SccProjectTopLevelParentUniqueName6 = SpeechForm.sln
+		SccProjectName6 = SpeechForm.Models
+		SccLocalPath6 = SpeechForm.Models
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 8
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://dev.azure.com/marcosantorosoares
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = SpeechForm.AzureFunction\\SpeechForm.AzureFunction.csproj
+		SccProjectTopLevelParentUniqueName1 = SpeechForm.sln
+		SccProjectName1 = SpeechForm.AzureFunction
+		SccLocalPath1 = SpeechForm.AzureFunction
+		SccProjectUniqueName2 = SpeechForm.Repository\\SpeechForm.Repository.csproj
+		SccProjectTopLevelParentUniqueName2 = SpeechForm.sln
+		SccProjectName2 = SpeechForm.Repository
+		SccLocalPath2 = SpeechForm.Repository
+		SccProjectUniqueName3 = SpeechForm.Setup\\SpeechForm.Setup.vdproj
+		SccProjectTopLevelParentUniqueName3 = SpeechForm.sln
+		SccProjectName3 = SpeechForm.Setup
+		SccLocalPath3 = SpeechForm.Setup
+		SccProjectUniqueName4 = SpeechForm.Web\\SpeechForm.Web.csproj
+		SccProjectTopLevelParentUniqueName4 = SpeechForm.sln
+		SccProjectName4 = SpeechForm.Web
+		SccLocalPath4 = SpeechForm.Web
+		SccProjectUniqueName5 = SpeechForm\\SpeechForm.csproj
+		SccProjectTopLevelParentUniqueName5 = SpeechForm.sln
+		SccProjectName5 = SpeechForm
+		SccLocalPath5 = SpeechForm
+		SccProjectUniqueName7 = SpeechForm.Models\\SpeechForm.Models.csproj
+		SccProjectTopLevelParentUniqueName7 = SpeechForm.sln
+		SccProjectName7 = SpeechForm.Models
+		SccLocalPath7 = SpeechForm.Models
+	EndGlobalSection
+EndGlobal
